@@ -34,14 +34,23 @@ data = [
 let index = 0;
 
 function next() {
-  document.getElementById("bar").classList.remove("go");
+  document.getElementById(
+    "content"
+  ).innerHTML = `<div id="bar" class="bar"></div>
+  <p></p>
+  <div class="person">
+      <div class="img"></div>
+      <div>
+          <div id="name" class="name"></div>
+          <div id="job" class="job"></div>
+      </div>
+  </div>`;
 
   if (index == data.length) {
     index = 0;
   }
-  setTimeout(() => {
-    document.getElementById("bar").classList.add("go");
-  }, 5);
+  document.getElementById("bar").classList.add("go");
+
   document.querySelector("p").innerText = `${data[index].testimonial}`;
   document.getElementById("name").innerText = `${data[index].name}`;
   document.getElementById("job").innerText = `${data[index].job}`;
@@ -54,4 +63,4 @@ function next() {
 }
 
 next();
-setInterval(next, 7005);
+setInterval(next, 7000);
