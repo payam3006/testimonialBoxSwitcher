@@ -1,0 +1,106 @@
+body {
+  /*use 100vh for mobile responsive
+Ahmad!!!*/
+  height: 100dvh; /* fallback for Js load */
+
+  /* How TO - Disable Text Selection */
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: larger;
+  justify-content: center;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: lightgray;
+  /* color: white; */
+}
+/* prevent Refresh on touchDown */
+body {
+  overscroll-behavior: contain;
+}
+
+label {
+  display: block;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.main {
+  background-color: white;
+  padding: 50px 20px;
+  max-width: 80vmin;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px gray;
+  background-color: blueviolet;
+  color: white;
+  display: flex;
+}
+
+.fa {
+  margin: 20px 10px;
+  opacity: 0.8;
+  color: violet;
+  font-size: 30px;
+}
+p {
+  text-align: justify;
+  font-size: 1.5vmax;
+  font-size: 2vmin;
+
+  line-height: 25px;
+}
+.bar {
+  background-color: white;
+  height: 2px;
+  width: 0;
+}
+.go {
+  animation: go 7s linear;
+}
+@keyframes go {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.img {
+  margin-right: 10px;
+  height: 80px;
+  width: 80px;
+  background-color: aliceblue;
+  border-radius: 40px;
+  background-position: center;
+  background-size: cover;
+}
+.person {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: violet;
+}
+.job {
+  margin-top: 4px;
+  font-size: smaller;
+}
+
+/* //////////////////////////////////// */
+
+@media only screen and (max-width: 600px) {
+  p {
+    font-size: 1.5vmax;
+  }
+  .fa {
+    font-size: 20px;
+  }
+}
+
+/* //////////////////////////////////// */
